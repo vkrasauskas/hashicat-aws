@@ -192,6 +192,6 @@ resource aws_key_pair "hashicat" {
 }
 
 resource aws_instance "tags" {
-  Billable = "true"
-  Department = "devops"
+  "Billable" = "true"
+  "Department" = "devops"
 }
