@@ -124,6 +124,8 @@ resource aws_instance "hashicat" {
 
   tags = {
     Name = "${var.prefix}-hashicat-instance"
+    Billable    = true
+    Department  = "devops"
   }
 }
 
@@ -191,9 +193,3 @@ resource aws_key_pair "hashicat" {
   public_key = tls_private_key.hashicat.public_key_openssh
 }
 
-resource aws_instance "hashicat" {
-  tags = {
-    Billable    = true
-    Department  = "devops"
-  }
-}
